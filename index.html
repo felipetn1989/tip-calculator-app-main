@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="Splitter app logo" />
+    </header>
+
+    <main class="calculator">
+      <div class="value_inputs">
+        <form action="#">
+          <label for="ibill">Bill</label>
+          <input type="number" name="bill" id="ibill" />
+        </form>
+
+        <div class="tip_selector">
+          <form action="#">
+            <span class="select_tip">Select Tip %</span>
+
+            <input type="radio" name="tipPercentage" id="fivePerc" />
+            <label for="fivePerc">5%</label>
+
+            <input type="radio" name="tipPercentage" id="tenPerc" />
+            <label for="tenPerc">10%</label>
+
+            <input type="radio" name="tipPercentage" id="fifteenPerc" />
+            <label for="fifteenPerc">15%</label>
+
+            <input type="radio" name="tipPercentage" id="twentyfivePerc" />
+            <label for="twentyfivePerc">25%</label>
+
+            <input type="radio" name="tipPercentage" id="fiftyPerc" />
+            <label for="fiftyPerc">50%</label>
+
+            <input type="radio" name="tipPercentage" id="customPerc" />
+            <label for="customPerc">Custom</label>
+          </form>
+        </div>
+
+        <form action="#">
+          <label for="inumPeople">Number of People</label>
+          <input type="number" name="num_people" id="inumPeople" />
+        </form>
+      </div>
+
+      <div class="results">
+        <div class="tip_person">
+          <span class="tip_amount">Tip Amount</span>
+          <span class="per_person">/ person</span>
+          <span class="tip_result">0.00</span>
+        </div>
+        <div class="total_person">
+          <span class="total">Total</span>
+          <span class="per_person">/ person</span>
+          <span class="total_result">0.00</span>
+        </div>
+        <button class="reset">Reset</button>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/felipetn1989" target="_blank">Felipe Thomé</a
+      >.
+    </footer>
+  </body>
+</html>
