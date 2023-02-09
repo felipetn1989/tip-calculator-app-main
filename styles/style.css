@@ -186,10 +186,14 @@ input[type="radio"] {
   align-items: center;
 }
 
-.numberPeople {
-  margin-top: 0.25rem;
-  display: grid;
-  gap: 0.5rem;
+.text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error_msg {
+  display: none;
+  color: red;
 }
 
 #inumPeople {
