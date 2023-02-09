@@ -111,12 +111,13 @@ header img {
 
 .calculator {
   background-color: var(--White);
-  border-radius: 1.5rem;
-  padding: 1.875rem 2rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  padding-bottom: 1.875rem;
 }
 
 .value_inputs {
   display: grid;
+  padding: 1.875rem 2rem;
   gap: 1.875rem;
 }
 
@@ -136,7 +137,6 @@ header img {
   background-position-y: center;
   background-position-x: 1.25rem;
   color: var(--Very-dark-cyan);
-  padding-left: 12.75rem;
   font-size: 1.5rem;
   width: 100%;
 }
@@ -196,7 +196,58 @@ input[type="radio"] {
   background-image: url("../images/icon-person.svg");
 }
 
+.results {
+  margin: 0 1.5rem;
+  padding: 2.3125rem 1.5625rem 1.375rem 1.5625rem;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0.75rem;
+  display: grid;
+  gap: 1.3125rem;
+}
+
+.tip_amount,
+.total {
+  color: var(--White);
+  grid-area: one;
+}
+
+.per_person {
+  color: var(--Grayish-cyan);
+  font-size: 0.75rem;
+  grid-area: two;
+}
+
+.tip_result,
+.total_result {
+  color: var(--Strong-cyan);
+  grid-area: three;
+  place-self: center end;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.tip_person,
+.total_person {
+  display: grid;
+  grid-template-areas:
+    "one three"
+    "two three";
+}
+
+.reset {
+  margin-top: 0.75rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.3125rem;
+  background-color: var(--Strong-cyan);
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: var(--Very-dark-cyan);
+}
+
 .attribution {
+  margin-top: 1rem;
   font-size: 0.6875rem;
   text-align: center;
 }

@@ -26,7 +26,7 @@
       <div class="value_inputs">
         <form class="bill_input" action="#">
           <label for="ibill">Bill</label>
-          <input type="number" name="bill" id="ibill" />
+          <input dir="rtl" type="number" name="bill" id="ibill" />
         </form>
 
         <div class="tip_selector">
@@ -62,9 +62,9 @@
           </form>
         </div>
 
-        <form class=numberPeople action="#">
+        <form class="numberPeople" action="#">
           <label for="inumPeople">Number of People</label>
-          <input type="number" name="num_people" id="inumPeople" />
+          <input dir="rtl" type="number" name="num_people" id="inumPeople" />
         </form>
       </div>
 
@@ -72,12 +72,18 @@
         <div class="tip_person">
           <span class="tip_amount">Tip Amount</span>
           <span class="per_person">/ person</span>
-          <span class="tip_result">0.00</span>
+          <span class="tip_result">
+            <img src="images/icon-dollar-color2.svg" alt="" aria-hidden="true" />
+            0.00
+          </span>
         </div>
         <div class="total_person">
           <span class="total">Total</span>
           <span class="per_person">/ person</span>
-          <span class="total_result">0.00</span>
+          <span class="total_result">
+            <img src="images/icon-dollar-color2.svg" alt="" aria-hidden="true" />
+            0.00
+          </span>
         </div>
         <button class="reset">Reset</button>
       </div>
