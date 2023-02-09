@@ -96,20 +96,6 @@ h6 {
 
 /* General Styling */
 
-header img {
-  margin: auto;
-}
-
-body {
-  background-color: var(--Light-grayish-cyan);
-  font-family: var(--ff-body);
-}
-
-.calculator {
-  background-color: var(--White);
-  border-radius: 1.5rem 1.5rem 0 0;
-}
-
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
