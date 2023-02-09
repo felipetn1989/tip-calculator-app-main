@@ -96,6 +96,40 @@ h6 {
 
 /* General Styling */
 
+body {
+  background-color: var(--Light-grayish-cyan);
+  font-family: var(--ff-body);
+}
+
+header {
+  padding-top: 3.125rem;
+  padding-bottom: 2.5625rem;
+}
+header img {
+  margin: auto;
+}
+
+.calculator {
+  background-color: var(--White);
+  border-radius: 1.5rem;
+  padding: 1.875rem 2rem;
+}
+
+.bill_input {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--Dark-grayish-cyan);
+}
+
+#ibill {
+  border: none;
+  height: 3rem;
+  background-color: var(--Very-light-grayish-cyan);
+  padding: 0 1.0625rem;
+  background-image: url('../');
+}
+
+
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
