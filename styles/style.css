@@ -115,20 +115,86 @@ header img {
   padding: 1.875rem 2rem;
 }
 
+.value_inputs {
+  display: grid;
+  gap: 1.875rem;
+}
+
 .bill_input {
   display: grid;
   gap: 0.5rem;
   color: var(--Dark-grayish-cyan);
 }
 
-#ibill {
+#ibill,
+#inumPeople {
   border: none;
   height: 3rem;
   background-color: var(--Very-light-grayish-cyan);
   padding: 0 1.0625rem;
-  background-image: url('../');
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 1.25rem;
+  color: var(--Very-dark-cyan);
+  padding-left: 12.75rem;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
+#ibill {
+  background-image: url("../images/icon-dollar.svg");
+}
+
+.tip_selector > form {
+  display: grid;
+  gap: 1rem;
+}
+
+.tip_blocs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.percentage {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  justify-content: center;
+}
+
+.custom {
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Dark-grayish-cyan);
+  justify-content: flex-end;
+  padding-right: 1.0625rem;
+}
+
+.percentage,
+.custom {
+  height: 3rem;
+  border-radius: 0.3125rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.numberPeople {
+  margin-top: 0.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#inumPeople {
+  background-image: url("../images/icon-person.svg");
+}
 
 .attribution {
   font-size: 0.6875rem;

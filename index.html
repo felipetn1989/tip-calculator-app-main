@@ -33,27 +33,36 @@
           <form action="#">
             <span class="select_tip">Select Tip %</span>
 
-            <input type="radio" name="tipPercentage" id="fivePerc" />
-            <label for="fivePerc">5%</label>
-
-            <input type="radio" name="tipPercentage" id="tenPerc" />
-            <label for="tenPerc">10%</label>
-
-            <input type="radio" name="tipPercentage" id="fifteenPerc" />
-            <label for="fifteenPerc">15%</label>
-
-            <input type="radio" name="tipPercentage" id="twentyfivePerc" />
-            <label for="twentyfivePerc">25%</label>
-
-            <input type="radio" name="tipPercentage" id="fiftyPerc" />
-            <label for="fiftyPerc">50%</label>
-
-            <input type="radio" name="tipPercentage" id="customPerc" />
-            <label for="customPerc">Custom</label>
+            <div class="tip_blocs">
+              <label class="percentage" for="fivePerc">
+                5%
+                <input type="radio" name="tipPercentage" id="fivePerc" />
+              </label>
+              <label class="percentage" for="tenPerc">
+                10%
+                <input type="radio" name="tipPercentage" id="tenPerc" />
+              </label>
+              <label class="percentage" for="fifteenPerc">
+                15%
+                <input type="radio" name="tipPercentage" id="fifteenPerc" />
+              </label>
+              <label class="percentage" for="twentyfivePerc">
+                25%
+                <input type="radio" name="tipPercentage" id="twentyfivePerc" />
+              </label>
+              <label class="percentage" for="fiftyPerc">
+                50%
+                <input type="radio" name="tipPercentage" id="fiftyPerc" />
+              </label>
+              <label class="custom" for="customPerc">
+                Custom
+                <input type="radio" name="tipPercentage" id="customPerc" />
+              </label>
+            </div>
           </form>
         </div>
 
-        <form action="#">
+        <form class=numberPeople action="#">
           <label for="inumPeople">Number of People</label>
           <input type="number" name="num_people" id="inumPeople" />
         </form>
