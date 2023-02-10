@@ -99,6 +99,9 @@ h6 {
 body {
   background-color: var(--Light-grayish-cyan);
   font-family: var(--ff-body);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -117,6 +120,7 @@ input:focus {
   background-color: var(--White);
   border-radius: 1.5rem 1.5rem 0 0;
   padding-bottom: 1.875rem;
+  max-width: 30rem;
 }
 
 .value_inputs {
@@ -294,3 +298,34 @@ input[type="radio"] {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* Media query for desktops */
+
+@media screen and (min-width:60em) {
+  body {
+    justify-content: center;
+  }
+
+  header {
+    margin-top: -6rem;
+  }
+
+  .calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: unset;
+    width: 57.5rem;
+  }
+
+  .tip_blocs {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .choose_custom {
+    margin: auto;
+    padding-right: unset;
+  }
+
+}
+
+
