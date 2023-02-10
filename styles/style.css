@@ -186,6 +186,12 @@ input[type="radio"] {
   align-items: center;
 }
 
+.choose_custom_input {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
 .text {
   display: flex;
   justify-content: space-between;

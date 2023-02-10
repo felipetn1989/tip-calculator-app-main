@@ -8,24 +8,44 @@ const totalResult = document.querySelector(".total_result_value");
 
 const errorMsg = document.querySelector(".error_msg");
 
-const inumPeople = document.getElementById("inumPeople");
+const reset = document.querySelector(".reset");
 
-let selectedIndex = 1;
-let tip = 0.05;
-ibill.value = ""
-inumPeople.value = ""
+const custom = document.querySelector(".choose_custom_input");
 
+const customTitle = document.querySelector(".choose_custom");
 
-labels[0].style.backgroundColor = "var(--Strong-cyan)";
+function reload() {
+  ibill.value = "";
+  inumPeople.value = "";
+  custom.value = "";
+  tipResult.innerHTML = "0.00";
+  totalResult.innerHTML = "0.00";
+  ibill.focus();
+}
+
+reload();
+
+ibill.addEventListener("change", displayResults);
+inumPeople.addEventListener("change", displayResults);
+custom.addEventListener("change",displayResults)
 
 percentages.forEach((percentage, index) => {
-  percentage.addEventListener("click", () => {
+  percentage.addEventListener("click", function () {
     if (percentage.checked) {
       selectedIndex = index + 1;
       labels[index].style.backgroundColor = "var(--Strong-cyan)";
+      if (selectedIndex == 6) {
+        custom.style.display = "unset";
+        customTitle.style.display = "none";
+        custom.focus()
+      } else {
+        custom.style.display = "none";
+        customTitle.style.display = "flex";
+      }
       for (let j = 0; j < labels.length; j++) {
         if (j != index) {
           labels[j].style.backgroundColor = "var(--Very-dark-cyan)";
+          labels[5].style.backgroundColor = "var(--Very-light-grayish-cyan)";
         }
       }
       switch (selectedIndex) {
@@ -43,18 +63,28 @@ percentages.forEach((percentage, index) => {
           break;
         case 5:
           tip = 0.5;
+          break;
+        case 6: 
+          tip = custom.value/100
+          console.log(tip)
       }
     }
-    let numberPeople = inumPeople.value;
-    
-    if (inumPeople.value == 0) {
-      errorMsg.style.display = "inline";
-      tipResult.innerHTML = "0.00";
-      totalResult.innerHTML = "0.00";
-    } else {
-      tipResult.innerHTML = ((ibill.value * tip) / numberPeople).toFixed(2);
-      totalResult.innerHTML = (ibill.value / numberPeople).toFixed(2)
-    }
+
+    displayResults();
   });
 });
 
+reset.addEventListener("click", reload);
+
+function displayResults() {
+  let numberPeople = inumPeople.value;
+  if (inumPeople.value == 0) {
+    errorMsg.style.display = "inline";
+    tipResult.innerHTML = "0.00";
+    totalResult.innerHTML = "0.00";
+  } else {
+    errorMsg.style.display = "none";
+    tipResult.innerHTML = ((ibill.value * tip) / numberPeople).toFixed(2);
+    totalResult.innerHTML = (ibill.value / numberPeople).toFixed(2);
+  }
+}

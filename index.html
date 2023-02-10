@@ -26,7 +26,7 @@
       <div class="value_inputs">
         <form class="bill_input" action="#">
           <label for="ibill">Bill</label>
-          <input dir="rtl" type="number" name="bill" id="ibill" />
+          <input dir="rtl" type="number" name="bill" id="ibill" min="0" />
         </form>
 
         <div class="tip_selector">
@@ -55,7 +55,8 @@
                 <input type="radio" name="tipPercentage" id="fiftyPerc" />
               </label>
               <label class="custom percentage" for="customPerc">
-                Custom
+                <span class="choose_custom">Custom</span>
+                <input dir="rtl" class="choose_custom_input" type="number" min="0" max="100"/>
                 <input type="radio" name="tipPercentage" id="customPerc" />
               </label>
             </div>
