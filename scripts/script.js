@@ -10,6 +10,8 @@ const errorMsg = document.querySelector(".error_msg");
 
 const reset = document.querySelector(".reset");
 
+const customButton = document.querySelector(".custom");
+
 const custom = document.querySelector(".choose_custom_input");
 
 const customTitle = document.querySelector(".choose_custom");
@@ -25,12 +27,13 @@ function reload() {
 
 reload();
 
-ibill.addEventListener("change", displayResults);
-inumPeople.addEventListener("change", displayResults);
-custom.addEventListener("change", displayResults);
-custom.addEventListener("change", () => {
+ibill.addEventListener("input", displayResults);
+ibill.addEventListener("input", displayResults);
+inumPeople.addEventListener("input", displayResults);
+custom.addEventListener("input", () => {
   tip = custom.value / 100;
 });
+custom.addEventListener("input", displayResults);
 
 percentages.forEach((percentage, index) => {
   percentage.addEventListener("click", function () {
@@ -39,12 +42,13 @@ percentages.forEach((percentage, index) => {
       labels[index].style.backgroundColor = "var(--Strong-cyan)";
       if (selectedIndex == 6) {
         custom.style.display = "unset";
-        custom.style.border = "1px solid cyan";
+        customButton.style.border = "1px solid cyan";
         customTitle.style.display = "none";
         custom.focus();
       } else {
         custom.value = "";
         custom.style.display = "none";
+        customButton.style.border = "none";
         customTitle.style.display = "flex";
       }
       for (let j = 0; j < labels.length; j++) {
@@ -82,11 +86,13 @@ function displayResults() {
   let numberPeople = inumPeople.value;
   if (inumPeople.value == 0) {
     errorMsg.style.display = "inline";
+    inumPeople.style.border = "1px solid red";
     tipResult.innerHTML = "0.00";
     totalResult.innerHTML = "0.00";
   } else {
     errorMsg.style.display = "none";
+    inumPeople.style.border = "none";
     tipResult.innerHTML = ((ibill.value * tip) / numberPeople).toFixed(2);
-    totalResult.innerHTML = (ibill.value / numberPeople).toFixed(2);
+    totalResult.innerHTML = (ibill.value / inumPeople.value).toFixed(2);
   }
 }

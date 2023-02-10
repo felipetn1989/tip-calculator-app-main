@@ -85,9 +85,9 @@ h6 {
 
   --Very-dark-cyan: hsl(183, 100%, 15%);
   --Dark-grayish-cyan: hsl(186, 14%, 43%);
-  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Grayish-cyan: hsl(186, 14%, 56%);
   --Light-grayish-cyan: hsl(185, 41%, 84%);
-  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --Very-light-grayish-cyan: hsl(180, 37%, 97%);
   --White: hsl(0, 0%, 100%);
 
   --ff-body: "Space Mono", monospace;
@@ -109,6 +109,10 @@ header img {
   margin: auto;
 }
 
+input:focus {
+  outline: none;
+}
+
 .calculator {
   background-color: var(--White);
   border-radius: 1.5rem 1.5rem 0 0;
@@ -125,6 +129,22 @@ header img {
   display: grid;
   gap: 0.5rem;
   color: var(--Dark-grayish-cyan);
+}
+
+#ibill:focus,
+#inumPeople:focus {
+  border: 2px solid var(--Strong-cyan);
+}
+
+#ibill:hover,
+#inumPeople:hover,
+.percentage:hover,
+.reset:hover {
+  cursor: pointer;
+}
+
+.percentage:hover, .reset:hover {
+  background-color: #9fe8df;
 }
 
 #ibill,
@@ -174,7 +194,6 @@ input[type="radio"] {
   background-color: var(--Very-light-grayish-cyan);
   color: var(--Dark-grayish-cyan);
   justify-content: flex-end;
-  padding-right: 1.0625rem;
 }
 
 .percentage,
@@ -186,16 +205,17 @@ input[type="radio"] {
   align-items: center;
 }
 
+.choose_custom {
+  padding-right: 1.0625rem;
+}
+
 .choose_custom_input {
   display: none;
   width: 100%;
+  height: 100%;
   text-align: center;
   border: none;
   color: var(--Very-dark-cyan);
-}
-
-input:focus {
-  outline: none;
 }
 
 .text {
