@@ -27,7 +27,10 @@ reload();
 
 ibill.addEventListener("change", displayResults);
 inumPeople.addEventListener("change", displayResults);
-custom.addEventListener("change",displayResults)
+custom.addEventListener("change", displayResults);
+custom.addEventListener("change", () => {
+  tip = custom.value / 100;
+});
 
 percentages.forEach((percentage, index) => {
   percentage.addEventListener("click", function () {
@@ -36,9 +39,11 @@ percentages.forEach((percentage, index) => {
       labels[index].style.backgroundColor = "var(--Strong-cyan)";
       if (selectedIndex == 6) {
         custom.style.display = "unset";
+        custom.style.border = "1px solid cyan";
         customTitle.style.display = "none";
-        custom.focus()
+        custom.focus();
       } else {
+        custom.value = "";
         custom.style.display = "none";
         customTitle.style.display = "flex";
       }
@@ -64,9 +69,6 @@ percentages.forEach((percentage, index) => {
         case 5:
           tip = 0.5;
           break;
-        case 6: 
-          tip = custom.value/100
-          console.log(tip)
       }
     }
 

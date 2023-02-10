@@ -190,6 +190,12 @@ input[type="radio"] {
   display: none;
   width: 100%;
   text-align: center;
+  border: none;
+  color: var(--Very-dark-cyan);
+}
+
+input:focus {
+  outline: none;
 }
 
 .text {
