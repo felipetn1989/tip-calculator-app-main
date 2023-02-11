@@ -143,7 +143,9 @@ input:focus {
 #ibill:hover,
 #inumPeople:hover,
 .percentage:hover,
-.reset:hover {
+.reset:hover,
+.custom:hover,
+.choose_custom:hover {
   cursor: pointer;
 }
 

@@ -54,27 +54,32 @@
                 50%
                 <input type="radio" name="tipPercentage" id="fiftyPerc" />
               </label>
-              <label class="custom percentage" for="customPerc">
-                <span class="choose_custom">Custom</span>
-                <input
-                  dir="rtl"
-                  class="choose_custom_input"
-                  type="number"
-                  min="0"
-                  max="100"
-                />
-                <input type="radio" name="tipPercentage" id="customPerc" />
-              </label>
+              <div class="custom percentage">
+                <label for="customPerc">
+                  <span class="choose_custom">Custom</span>
+                  <input type="radio" name="tipPercentage" id="customPerc" />
+                </label>
+                <label for="icustom">
+                  <input
+                    dir="rtl"
+                    class="choose_custom_input"
+                    type="number"
+                    id="icustom"
+                    min="0"
+                    max="100"
+                  />
+                </label>
+              </div>
             </div>
           </form>
         </div>
 
         <form class="people_form" action="#">
           <label class="numberPeople" for="inumPeople">
-            <div class="text">
+            <span class="text">
               Number of People
               <span class="error_msg">Can't be zero</span>
-            </div>
+            </span>
             <input
               dir="rtl"
               type="number"

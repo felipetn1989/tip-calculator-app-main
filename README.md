@@ -48,5 +48,3 @@ Users should be able to:
 
 - Website - [Felipe Thomé](https://www.github.com/felipetn1989)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
-
